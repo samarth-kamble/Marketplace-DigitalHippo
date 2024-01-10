@@ -62,6 +62,7 @@ const Navbar = () => {
                   <div className=" ml-4 flow-root lg:ml-6">
                     <Cart />
                   </div>
+                  <span className="h-6 w-px bg-gray-200" aria-hidden="true" />
                 </div>
               </div>
             </div>

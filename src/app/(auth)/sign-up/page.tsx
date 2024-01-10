@@ -15,6 +15,7 @@ import {
   AuthCrendentialValidator,
   TAuthCrendentialValidator,
 } from "@/lib/validators/account-credentials-validator";
+import { trpc } from "@/trpc/client";
 
 const Page = () => {
   const {
@@ -25,6 +26,8 @@ const Page = () => {
     resolver: zodResolver(AuthCrendentialValidator),
   });
 
+  const { data } = trpc.anyApiRoute.useQuery();
+  console.log(data);
   const onSubmit = ({ email, password }: TAuthCrendentialValidator) => {
     // send data to server
   };
